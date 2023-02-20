@@ -13,29 +13,48 @@
 <header>
     <h1> Salary Calculator </h1>
 </header>
-<form class = "personal-info" onsubmit="submitForm(event)">
+<div id = "content">
+<form class = "personal-info" onSubmit="submitForm(event)">
     <h2>Add Employee</h2>
 First Name: <input id ="firstname-input" type="text">
 Last Name: <input id ="lastname-input" type="text">
-
-
-
-
+ID: <input id = "id-input" type="number">
+Title:<input id = "title-input" type="text">
+Annual Salary: <input id = "salary-input" type="number"><br/>
+<input type="submit" value="Submit"/>
 </form>
+<table id= "customers">
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Annual Salery</td>
+            <td>
+                
+            </td>
+        </tr>
+    </thead>
+    <h2>Employee</h2>
+    <tbody id = "employeesData">
+    <tr>
+        <td>Jen</td>
+        <td>Barber</td>
+        <td>4521</td>
+        <td>Team Lead</td>
+        <td>$80,000</td>
+        <td>  <button onClick = "removeRow(event)" > Delete</button>  </td>
+    </tr>
+    </tbody>
+</table> 
+</div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-    <script src="client.js"></script>
+<script src="client.js"></script>
 </body>
 
 </html>
