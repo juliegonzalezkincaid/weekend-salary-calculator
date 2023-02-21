@@ -43,6 +43,14 @@ let monthlyamount= salaryVal / 12;
 totalSalary = totalSalary + monthlyamount;
 let totalmonthlySpan = document.querySelector ('#totalmonthly')
 totalmonthlySpan.innerHTML = totalSalary
+
+//if to compare total salary
+if (totalSalary >= 20000) {
+
+
+// change total monthly span color 
+totalmonthlySpan.style.backgroundColor = 'red';
+}
 }
 
 
