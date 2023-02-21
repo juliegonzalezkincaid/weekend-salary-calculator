@@ -21,12 +21,12 @@
 <input id = "id-input" type="number"placeholder="ID">
 <input id = "title-input" type="text"placeholder="Title">
 <input id = "salary-input" type="number"placeholder="Annual Salary"><br/>
-<input type="submit" value="Submit"/>
+<input type="submit" value="Submit"style="position: absolute; right: 0;" /><br/><br/><br/>
 <!-- <input id = "mnthlysalary-input" type="number" value="mnthlysalary"> -->
 </form>
 <table id= "employeesData">
     <thead>
-        <tr>
+        <tr id="titles">
             <td> First Name</td>
             <td>Last Name</td>
             <td>ID</td>
@@ -43,7 +43,7 @@
         <td>4521</td>
         <td>Team Lead</td>
         <td>$80,000</td>
-        <td>  <button onClick = "removeRow(event)" > Delete</button>  </td>
+        <td>  <button id="delete" onClick = "removeRow(event)" > Delete</button>  </td>
     </tr>
     <tr>
         <td>Julie</td>
@@ -51,13 +51,13 @@
         <td>87</td>
         <td>Lead</td>
         <td>$190,000</td>
-        <td>  <button onClick = "removeRow(event)" > Delete</button>  </td>
+        <td>  <button id="delete" onClick = "removeRow(event)" > Delete</button>  </td>
     </tr>
     </tbody>
 </table> 
 </div>
-<div id="totalSalary">
-    <h2>Total Monthly Salary: $<span id="total-monthly"></span></h2>
+<div id="totalSalary" style="position: absolute; right: 0;">
+    <h2>Total Monthly Salary: $ <span id="totalmonthly">0</span></h2>
 </div>
 
 

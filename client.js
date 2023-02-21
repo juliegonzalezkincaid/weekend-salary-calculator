@@ -24,7 +24,6 @@ console.log(titleVal);
 let salaryVal=document.querySelector ('#salary-input').value;
 console.log(salaryVal);
 
-let totalSalary += (salary/12);
 
 
 let addEmployeeTable = document.querySelector ('#employeesData');
@@ -35,26 +34,38 @@ addEmployeeTable.innerHTML +=`
     <td>${idVal}</td>
     <td>${titleVal}</td>
     <td>${salaryVal}</td>
-    <td> <button onClick = "removeRow(event)" > Delete</button></td>
+    <td> <button id="delete" onClick = "removeRow(event)" > Delete</button></td>
     
 </tr>
 `
 ;
-// let mnthlysalaryDiv= document.querySelector ('#mnthlysalary-input').value;
-// console.log(mnthlysalary)
+let monthlyamount= salaryVal / 12;
+totalSalary = totalSalary + monthlyamount;
+let totalmonthlySpan = document.querySelector ('#totalmonthly')
+totalmonthlySpan.innerHTML = totalSalary
+}
+
+
+
+//? ive been working on my functions to calculate the monthly salary and i feel like im going 
+//?in circles
+// /let totalSalary += (salary/12);
+
 //  for (let i=0; i<salaryVal.length; i++){
 //         totalSalary += salaryVal[i] / 12;
 //         return totalSalary
 //         console.log(totalSlalary)
 //     }
-//if (salaryVal =>$20,000);
-    if (totalMonthlyCost >= 20000) {
-        monthlySalaryDiv.style.backgroundColor = 'red';
-        monthlySalaryDiv.style.color = 'white';
 
-     } 
+// function backgroundRed (salaryval){
+// if (salaryVal =>20000){
+// document.querySelector ('#salary-input').style.backgroundColor = 'red';
+// } 
+// else{
+//   document.querySelector ('#salary-input').style.backgroundColor = 'white';
+// }
+// };
 
-function removeRow(event){
-    event.target.closest('tr').remove()
-};
+ function removeRow(event){
+    event.target.closest('tr').remove();
 }
