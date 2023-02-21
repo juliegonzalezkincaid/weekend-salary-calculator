@@ -2,7 +2,7 @@
 console.log("working");
 
 
-let currentIndex=0;
+let totalSalary=0;
 
 function submitForm(event){
     console.log('submitForm');
@@ -24,6 +24,7 @@ console.log(titleVal);
 let salaryVal=document.querySelector ('#salary-input').value;
 console.log(salaryVal);
 
+let totalSalary += (salary/12);
 
 
 let addEmployeeTable = document.querySelector ('#employeesData');
@@ -34,12 +35,26 @@ addEmployeeTable.innerHTML +=`
     <td>${idVal}</td>
     <td>${titleVal}</td>
     <td>${salaryVal}</td>
+    <td> <button onClick = "removeRow(event)" > Delete</button></td>
+    
 </tr>
 `
 ;
-currentIndex += 1;
+// let mnthlysalaryDiv= document.querySelector ('#mnthlysalary-input').value;
+// console.log(mnthlysalary)
+//  for (let i=0; i<salaryVal.length; i++){
+//         totalSalary += salaryVal[i] / 12;
+//         return totalSalary
+//         console.log(totalSlalary)
+//     }
+//if (salaryVal =>$20,000);
+    if (totalMonthlyCost >= 20000) {
+        monthlySalaryDiv.style.backgroundColor = 'red';
+        monthlySalaryDiv.style.color = 'white';
+
+     } 
 
 function removeRow(event){
-    event.target.closest('tr').remove();
-}
+    event.target.closest('tr').remove()
+};
 }

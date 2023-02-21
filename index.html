@@ -14,30 +14,29 @@
     <h1> Salary Calculator </h1>
 </header>
 <div id = "content">
-<form class = "personal-info" onSubmit="submitForm(event)">
+<form class = "personal-info" onSubmit="submitForm(event)" onSubmit="" >
     <h2>Add Employee</h2>
-First Name: <input id ="firstname-input" type="text">
-Last Name: <input id ="lastname-input" type="text">
-ID: <input id = "id-input" type="number">
-Title:<input id = "title-input" type="text">
-Annual Salary: <input id = "salary-input" type="number"><br/>
+<input id ="firstname-input" type="text" placeholder="First Name:">
+<input id ="lastname-input" type="text"placeholder="Last Name:">
+<input id = "id-input" type="number"placeholder="ID">
+<input id = "title-input" type="text"placeholder="Title">
+<input id = "salary-input" type="number"placeholder="Annual Salary"><br/>
 <input type="submit" value="Submit"/>
+<!-- <input id = "mnthlysalary-input" type="number" value="mnthlysalary"> -->
 </form>
-<table id= "customers">
+<table id= "employeesData">
     <thead>
         <tr>
-            <td>First Name</td>
+            <td> First Name</td>
             <td>Last Name</td>
             <td>ID</td>
             <td>Title</td>
             <td>Annual Salery</td>
-            <td>
-                
-            </td>
+            <td></td>
         </tr>
     </thead>
     <h2>Employee</h2>
-    <tbody id = "employeesData">
+    <tbody id = "personalInfo">
     <tr>
         <td>Jen</td>
         <td>Barber</td>
@@ -46,10 +45,20 @@ Annual Salary: <input id = "salary-input" type="number"><br/>
         <td>$80,000</td>
         <td>  <button onClick = "removeRow(event)" > Delete</button>  </td>
     </tr>
+    <tr>
+        <td>Julie</td>
+        <td>Gonzalez-Kincaid</td>
+        <td>87</td>
+        <td>Lead</td>
+        <td>$190,000</td>
+        <td>  <button onClick = "removeRow(event)" > Delete</button>  </td>
+    </tr>
     </tbody>
 </table> 
 </div>
-
+<div id="totalSalary">
+    <h2>Total Monthly Salary: $<span id="total-monthly"></span></h2>
+</div>
 
 
 
